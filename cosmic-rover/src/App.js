@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Game from './game.js';
+import MainMenu from './components/mainMenu/mainMenu.js';
 
 function App() {
+  const [gameStarted, setGameStarted] = useState(false);
+
+  const handleStartGame = () => {
+    setGameStarted(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {gameStarted ? <Game /> : <MainMenu onStartGame={handleStartGame} />}
     </div>
   );
 }

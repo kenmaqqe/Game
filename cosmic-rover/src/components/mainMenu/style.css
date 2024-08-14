@@ -1,0 +1,26 @@
+.mainMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+}
+.mainMenu h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.mainMenu button{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: black;
+}
+.mainMenu button:hover{
+    background-color: #90e3fa;
+}
